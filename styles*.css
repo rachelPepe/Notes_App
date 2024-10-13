@@ -1,0 +1,101 @@
+    /* applys to all elements */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+    /* div inside body that contains h1, img and button*/
+.container{
+    width: 100%;    /* sets background to fill viewport width  */
+    min-height: 100vh;  /* sets background to fill viewport height*/
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: #fff;
+    padding-top: 4%;    /* space from top of h1 */
+    padding-left: 10%;  /* space from the left of h1*/
+}
+
+    /* controls the image and text in h1, does not include button, if you wanted button in the same row you would add display flex to the .container {}*/
+.container h1{
+    display: flex; 
+    align-items: center; 
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.container h1 img{
+    width: 60px;    /* make img inside h1 element smaller */
+}
+
+.container button img{
+    width: 25px;    /* make img inside button smaller */
+    margin-right: 8px;
+}
+
+    /* controls the img and text in button element inside the div with .container class */
+.container button{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd, #571094);
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;    /* padding and margin fits the img and text better inside the actual button*/
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+}
+
+    /* the class for the <p> and <div> element that is created for each added note */
+.input-box{
+    position: relative;     /* makes it so each new note is added below the last */
+    width: 100%;    /* makes each note fill the <p> element */
+    max-width: 500px;   /* each note cant be wider than 500px */
+    min-height: 150px;  /* each note cant be shorter than 150px */
+    background: #fff;
+    color: #333;
+    padding: 20px;  /* margin and padding here controls the actual text input, makes it inset from edge */
+    margin: 20px 0;
+    outline: none;
+    border-radius: 5px;
+}
+
+    /* delete img that is inside the note field inside <p> element  */
+.input-box img{
+    width: 25px;
+    position: absolute;
+    bottom: 15px;   /* sets the img 15px up from the bottom */
+    right: 15px;    /* sets the img 15px from the right */
+    cursor: pointer;
+}
+
+    /* Delete button */
+.delete-btn {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+    /* Hover effect for delete button */
+.delete-btn:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    opacity: 0.8; /* Reduces opacity for a visual effect */
+}
+
+/* Note container (holds the input box and delete button) */
+.note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
