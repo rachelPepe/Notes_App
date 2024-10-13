@@ -13,7 +13,8 @@
     background: linear-gradient(135deg, #cf9aff, #95c0ff);
     color: #fff;
     padding-top: 4%;    /* space from top of h1 */
-    padding-left: 10%;  /* space from the left of h1*/
+    padding-left: 10%;
+    padding-right: 10%;  /* space from the left of h1*/
 }
 
     /* controls the image and text in h1, does not include button, if you wanted button in the same row you would add display flex to the .container {}*/
